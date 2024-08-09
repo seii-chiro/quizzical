@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: grid;
+  place-items: center;
+  background-color: #0b2434;
+  height: 100vh;
+  font-family: Karla;
+}
+
+button {
+  font-family: Karla;
+}
+
+main {
+  background-color: #f5f7fb;
+  width: 600px;
+  height: 600px;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.title-container {
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  text-align: center;
+}
+
+/* button styles */
+
+.start-quiz-btn {
+  background-color: #4d5b9e;
+  color: #f5f7fb;
+  width: 193px;
+  height: 52px;
+  border-style: hidden;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.start-quiz-btn:active {
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.293);
+}
+
+.check-answer-btn {
+  background-color: #4d5b9e;
+  color: #f5f7fb;
+  width: 150px;
+  height: 40px;
+  border-style: hidden;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.check-answer-btn:active {
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.293);
+}
+
+.choices {
+  margin: 2px 2px;
+  border-radius: 50px;
+  padding: 2px, 5px;
+  border: 1px solid navy;
+  background-color: white;
+}
+
+.choices.true {
+  background-color: aquamarine;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choices.true-true,
+.choices.false-true {
+  background-color: lime;
+}
+
+.choices.true-false {
+  background-color: rgb(226, 82, 82);
+}
+
+.score-display {
+  margin-right: 25px;
+  text-wrap: balance;
+}
+
+.score-display > span {
+  font-weight: bold;
+}
+
+.quiz-component {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+}
+
+.question {
+  padding: 0;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  text-wrap: pretty;
+}
+
+hr {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+@media (max-width: 630px) {
+  main {
+    width: 360px;
+  }
+}
+
+@media (max-width: 395px) {
+  main {
+    width: 300px;
+  }
+} 
+
+@media (max-width: 330px) {
+  main {
+    width: 280px;
+  }
+} 
+
+
