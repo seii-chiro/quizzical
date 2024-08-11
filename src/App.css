@@ -133,18 +133,21 @@ hr {
 @media (max-width: 630px) {
   main {
     width: 360px;
+    height: 95vh;
   }
 }
 
 @media (max-width: 395px) {
   main {
     width: 300px;
+    height: 95vh;
   }
 } 
 
 @media (max-width: 330px) {
   main {
     width: 280px;
+    height: 95vh;
   }
 } 
 
