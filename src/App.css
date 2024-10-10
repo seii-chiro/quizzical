@@ -73,7 +73,7 @@ main {
 }
 
 .choices.true {
-  background-color: #D6DBF5;
+  background-color: #d6dbf5;
   border-style: hidden;
 }
 
@@ -85,12 +85,12 @@ main {
 
 .choices.true-true,
 .choices.false-true {
-  background-color: #94D7A2;
+  background-color: #94d7a2;
   border-style: hidden;
 }
 
 .choices.true-false {
-  background-color: #F8BCBC;
+  background-color: #f8bcbc;
   opacity: 0.5;
   border-style: hidden;
 }
@@ -150,8 +150,7 @@ hr {
   .title-container {
     margin-top: 60%;
   }
-  
-} 
+}
 
 @media (max-width: 330px) {
   main {
@@ -162,6 +161,23 @@ hr {
   .title-container {
     margin-top: 60%;
   }
-} 
+}
 
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: 50% 40%;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -2,12 +2,14 @@ import { useEffect, useState } from "react"
 import QnA from "./QnA"
 import { nanoid } from "nanoid"
 import { decode } from "html-entities"
+import Loader from "./Loader"
 
 const Quiz = () => {
     const [quizdata, setQuizData] = useState([])
     const [score, setScore] = useState(null);
     const [isAnswering, setIsAnswering] = useState(true)
     const [idkWhatToCallThis, setIdkWhatToCallThis] = useState(true)
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -45,11 +47,17 @@ const Quiz = () => {
                 setQuizData(decodedResults);
             } catch (err) {
                 console.error('Oops, something went wrong', err);
+            } finally {
+                setIsLoading(false)
             }
         };
 
         fetchData();
     }, [idkWhatToCallThis]);
+
+    if (isLoading) {
+        return <Loader />
+    }
 
     const handleAnswerClick = (questionId, answerId) => {
 
@@ -123,7 +131,7 @@ const Quiz = () => {
                             <button className="check-answer-btn" onClick={checkAnswers}>{score !== null ? "Play Again" : "Check Answers"}</button>
                         </div>
                     </>
-                    : <h3>Loading...</h3>
+                    : <Loader />
                 }
 
             </div>
